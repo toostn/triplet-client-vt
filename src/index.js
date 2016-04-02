@@ -1,4 +1,4 @@
-var Client = require('triplet-core/util/client-util.js');
+var Client = require('triplet-core/client.js');
 var parsers = require('./parsers.js');
 var urlParams = require('./url-params');
 

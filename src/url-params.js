@@ -1,5 +1,5 @@
-var LocalTime = require('../../local-time.js');
-var dtString = require('../common/utils.js').dtString;
+var LocalTime = require('triplet-core/local-time.js');
+var dtString = require('triplet-core/utils/client-util.js').dtString;
 var PAST_TRIP_SEARCH_TIME = 300000;
 
 function addCommonParams(params, config) {
