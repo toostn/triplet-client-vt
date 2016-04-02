@@ -1,0 +1,26 @@
+{
+  "name": "triplet-client-vt",
+  "version": "0.1.0",
+  "description": "Västtrafik client for Triplet travel planner",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toostn/triplet-client-vt.git"
+  },
+  "keywords": [
+    "triplet",
+    "västtrafik"
+  ],
+  "author": "Torsten Freyhall",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toostn/triplet-client-vt/issues"
+  },
+  "homepage": "https://github.com/toostn/triplet-client-vt#readme",
+  "dependencies": {
+    "triplet-core": "^0.1.0"
+  }
+}
