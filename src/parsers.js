@@ -9,7 +9,7 @@ var Location = require('triplet-core/trip-models/location');
 var Utils = require('triplet-core/util/client-util.js');
 var forceArray = Utils.forceArray;
 var parseDate = Utils.parseLocalDate;
-var LocalTime = require('trilet-core/local-time.js');
+var LocalTime = require('triplet-core/local-time.js');
 
 var types = Carrier.Types;
 var vtTypes = {
