@@ -1,14 +1,14 @@
-var Client = require('triplet-core/client.js');
-var parsers = require('./parsers.js');
-var urlParams = require('./url-params');
+var Client = require('triplet-core/client.js')
+var parsers = require('./parsers.js')
+var urlParams = require('./url-params')
 
-var BASE_URL = 'https://api.vasttrafik.se/bin/rest.exe/v1';
+var BASE_URL = 'https://api.vasttrafik.se/bin/rest.exe/v1'
 
-function vtUrl(endpoint) {
-  return BASE_URL + endpoint;
+function vtUrl (endpoint) {
+  return BASE_URL + endpoint
 }
 
-module.exports = function vtClientFactory(apiKey, http) {
+module.exports = function vtClientFactory (apiKey, http) {
   return new Client(http, {
     apiKey: apiKey,
     shortName: 'vt',
@@ -24,5 +24,5 @@ module.exports = function vtClientFactory(apiKey, http) {
       coordinateSearch: true,
       quickMode: true
     }
-  });
-};
+  })
+}
