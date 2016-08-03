@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/toostn/triplet-client-vt#readme",
   "dependencies": {
-    "triplet-core": "^0.1.0"
+    "triplet-core": "^0.2.0"
   }
 }
