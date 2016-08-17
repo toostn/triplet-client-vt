@@ -7,7 +7,7 @@ function addCommonParams (params, config) {
   params.format = 'json'
 }
 
-exports.trips = function trips (query, config) {
+exports.trips = function (query, config) {
   var params = {
     needJourneyDetail: 0
   }
@@ -55,7 +55,7 @@ exports.trips = function trips (query, config) {
   return params
 }
 
-exports.nearbyStations = function nearbyStations (query, config) {
+exports.nearbyStations = function (query, config) {
   var params = {}
   var location = query.location
 
@@ -72,7 +72,7 @@ exports.nearbyStations = function nearbyStations (query, config) {
   return params
 }
 
-exports.stations = function stations (query, config) {
+exports.stations = function (query, config) {
   var string = query.queryString.slice(0).toLowerCase()
   string = string.replace('å', 'aa')
   string = string.replace('ä', 'ae')

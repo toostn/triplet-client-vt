@@ -8,7 +8,7 @@ function vtUrl (endpoint) {
   return BASE_URL + endpoint
 }
 
-module.exports = function vtClientFactory (apiKey, http) {
+module.exports = function (apiKey, http) {
   return new Client(http, {
     apiKey: apiKey,
     shortName: 'vt',

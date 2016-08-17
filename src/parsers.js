@@ -23,13 +23,13 @@ var vtTypes = {
   'TAXI': types.taxi
 }
 
-exports.stationsError = function stationsError (json) {
+exports.stationsError = function (json) {
   return json.LocationList.error || null
 }
 
 exports.nearbyStationsError = exports.stationsError
 
-exports.stations = function stations (json) {
+exports.stations = function (json) {
   var data = json.LocationList
 
   if (!data) return []
@@ -40,7 +40,7 @@ exports.stations = function stations (json) {
     .map(station)
 }
 
-exports.nearbyStations = function nearbyStations (json) {
+exports.nearbyStations = function (json) {
   var data = json.LocationList
 
   if (!data) return []
@@ -53,7 +53,7 @@ exports.nearbyStations = function nearbyStations (json) {
     .filter(function (s) { return s !== null })
 }
 
-exports.tripsError = function tripsError (json) {
+exports.tripsError = function (json) {
   return json.TripList.error || null
 }
 
