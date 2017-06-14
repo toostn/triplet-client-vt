@@ -2,14 +2,10 @@ var LocalTime = require('triplet-core/local-time.js')
 var dtString = require('triplet-core/util/client-util.js').dtString
 var PAST_TRIP_SEARCH_TIME = 300000
 
-function addCommonParams (params, config) {
-  params.authKey = config.apiKey
-  params.format = 'json'
-}
-
 exports.trips = function (query, config) {
   var params = {
-    needJourneyDetail: 0
+    needJourneyDetail: 0,
+    format: 'json'
   }
 
   var from = query.from
@@ -50,13 +46,11 @@ exports.trips = function (query, config) {
     params.additionalChangeTime = 0
   }
 
-  addCommonParams(params, config)
-
   return params
 }
 
 exports.nearbyStations = function (query, config) {
-  var params = {}
+  var params = { format: 'json' }
   var location = query.location
 
   if (location) {
@@ -67,19 +61,17 @@ exports.nearbyStations = function (query, config) {
   params.maxDist = query.radius || 3000
   params.maxNo = query.resultMaxCount || 50
 
-  addCommonParams(params, config)
-
   return params
 }
 
 exports.stations = function (query, config) {
-  var string = query.queryString.slice(0).toLowerCase()
+  var string = query.queryString.toLowerCase()
   string = string.replace('å', 'aa')
   string = string.replace('ä', 'ae')
   string = string.replace('ö', 'oe')
-  var params = {input: string}
 
-  addCommonParams(params, config)
-
-  return params
+  return {
+    format: 'json',
+    input: string
+  }
 }
